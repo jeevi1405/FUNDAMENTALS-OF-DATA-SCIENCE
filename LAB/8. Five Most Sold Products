@@ -1,0 +1,15 @@
+import pandas as pd
+from google.colab import files
+
+# Upload the CSV file
+uploaded = files.upload()
+
+# Read the CSV file
+df = pd.read_csv('order_data (1).csv')
+
+# Five most sold products
+top_5_products = df.groupby('Items')['Order Total'].sum().nlargest(5)
+
+# Output
+print("Five most sold products:")
+print(top_5_products)
