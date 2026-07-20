@@ -1,0 +1,14 @@
+import pandas as pd
+from google.colab import files
+
+# Upload the CSV file
+uploaded = files.upload()
+
+# Read the CSV file
+df = pd.read_csv("order_data.csv")
+
+# Analysis
+…print(avg_order_per_product)
+
+print("\nEarliest order date:", earliest_order)
+print("Latest order date:", latest_order)
